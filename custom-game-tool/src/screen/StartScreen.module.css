@@ -1,0 +1,33 @@
+@font-face {
+  font-family: "NexonMaplestory";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFLight.woff")
+    format("woff");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NexonMaplestory";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff")
+    format("woff");
+  font-weight: 700;
+  font-display: swap;
+}
+.screen {
+  width: fit-content;
+  height: fit-content;
+}
+.title {
+  font-family: "NexonMaplestory";
+  font-size: xx-large;
+  color: rgb(84, 224, 208);
+  /*rgb(65, 175, 203)*/
+}
+.button {
+  width: 10rem;
+  height: 2rem;
+  border-radius: 20px;
+}
+.button:hover {
+  cursor: pointer;
+}
