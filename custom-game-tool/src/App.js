@@ -1,12 +1,16 @@
-import logo from "./logo.svg";
-import StartScreen from "./screen/StartScreen";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { SelectScreen, StartScreen } from "./screen";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <StartScreen />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<StartScreen />} />
+        <Route path="/select" element={<SelectScreen />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
