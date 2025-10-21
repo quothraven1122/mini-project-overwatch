@@ -1,0 +1,12 @@
+.container {
+  width: 5rem;
+  padding: 0.5rem;
+}
+.img {
+  width: 5rem;
+  height: 5rem;
+}
+.name {
+  margin: 0;
+  text-align: center;
+}
