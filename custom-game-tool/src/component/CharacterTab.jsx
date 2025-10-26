@@ -46,7 +46,7 @@ export default function CharacterTab({ img, name, role }) {
       }}
       style={isInGlobal(name) ? { border: "1px solid red" } : {}}
     >
-      <img src={img} className={styles.img} draggable={false} />
+      <img src={img} className={styles.img} draggable={false} alt="" />
       <p className={styles.name}>{name}</p>
     </div>
   );
