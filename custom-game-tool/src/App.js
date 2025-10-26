@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { SelectScreen, StartScreen } from "./screen";
+import { SelectScreen, StartScreen, RandomScreen } from "./screen";
 import "./App.css";
 
 function App() {
@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route path="/" element={<StartScreen />} />
         <Route path="/select" element={<SelectScreen />} />
+        <Route path="/random" element={<RandomScreen />} />
       </Routes>
     </BrowserRouter>
   );

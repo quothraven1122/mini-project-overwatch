@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { useGlobal } from "../GlobalContext";
@@ -8,6 +8,14 @@ import styles from "./SelectScreen.module.css";
 export default function SelectScreen() {
   const { tank, setTank, dps, setDps, sup, setSup } = useGlobal();
   const navigate = useNavigate();
+  useEffect(() => {
+    const storedTank = JSON.parse(localStorage.getItem("tank"));
+    const storedDps = JSON.parse(localStorage.getItem("dps"));
+    const storedSup = JSON.parse(localStorage.getItem("sup"));
+    setTank(storedTank);
+    setDps(storedDps);
+    setSup(storedSup);
+  }, []);
   return (
     <div className={styles.selectScreen}>
       <div className={styles.selectContainer}>
@@ -29,7 +37,10 @@ export default function SelectScreen() {
         <button
           className={styles.button}
           onClick={() => {
-            navigate("/");
+            localStorage.setItem("tank", JSON.stringify(tank));
+            localStorage.setItem("dps", JSON.stringify(dps));
+            localStorage.setItem("sup", JSON.stringify(sup));
+            navigate("/random");
           }}
         >
           시작하기
