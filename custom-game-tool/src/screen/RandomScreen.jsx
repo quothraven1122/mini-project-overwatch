@@ -22,105 +22,111 @@ export default function RandomScreen() {
 
   return (
     <div className={styles.randomScreen}>
-      <div>
-        <p className={styles.randomCubeName}>탱커</p>
-        <div
-          className={`${styles.randomCube} ${
-            isAnimating[0] === 1 ? styles.animating : ""
-          }`}
-          onClick={() => {
-            setIsAnimating([1, 0, 0]);
-            setRole("TANK");
-            getRandomCharacter("TANK", tank);
-            setTimeout(() => {
-              setIsAnimating([0, 0, 0]);
-            }, 2000);
-          }}
-        >
-          <p className={styles.randomText}>?</p>
-        </div>
-        <div className={styles.resultContainer}>
-          <p
-            style={{
-              visibility: role === "TANK" ? "visible" : "hidden",
-              color: `${result.color}`,
-            }}
-            className={`${styles.resultName} ${
-              isAnimating[0] === 1 && styles.slideDown
+      {tank.length !== 0 && (
+        <div>
+          <p className={styles.randomCubeName}>탱커</p>
+          <div
+            className={`${styles.randomCube} ${
+              isAnimating[0] === 1 ? styles.animating : ""
             }`}
-          >
-            {"<"}
-            {result.name}
-            {">"}
-          </p>
-        </div>
-      </div>
-      <div>
-        <p className={styles.randomCubeName}>딜러</p>
-        <div
-          className={`${styles.randomCube} ${
-            isAnimating[1] === 1 ? styles.animating : ""
-          }`}
-          onClick={() => {
-            setIsAnimating([0, 1, 0]);
-            setRole("DPS");
-            getRandomCharacter("DPS", dps);
-            setTimeout(() => {
-              setIsAnimating([0, 0, 0]);
-            }, 2000);
-          }}
-        >
-          <p className={styles.randomText}>?</p>
-        </div>
-        <div className={styles.resultContainer}>
-          <p
-            style={{
-              visibility: role === "DPS" ? "visible" : "hidden",
-              color: `${result.color}`,
+            onClick={() => {
+              setIsAnimating([1, 0, 0]);
+              setRole("TANK");
+              getRandomCharacter("TANK", tank);
+              setTimeout(() => {
+                setIsAnimating([0, 0, 0]);
+              }, 2000);
             }}
-            className={`${styles.resultName} ${
-              isAnimating[1] === 1 && styles.slideDown
-            }`}
           >
-            {"<"}
-            {result.name}
-            {">"}
-          </p>
+            <p className={styles.randomText}>?</p>
+          </div>
+          <div className={styles.resultContainer}>
+            <p
+              style={{
+                visibility: role === "TANK" ? "visible" : "hidden",
+                color: `${result.color}`,
+              }}
+              className={`${styles.resultName} ${
+                isAnimating[0] === 1 && styles.slideDown
+              }`}
+            >
+              {"<"}
+              {result.name}
+              {">"}
+            </p>
+          </div>
         </div>
-      </div>
-      <div>
-        <p className={styles.randomCubeName}>힐러</p>
-        <div
-          className={`${styles.randomCube} ${
-            isAnimating[2] === 1 ? styles.animating : ""
-          }`}
-          onClick={() => {
-            setIsAnimating([0, 0, 1]);
-            setRole("SUP");
-            getRandomCharacter("SUP", sup);
-            setTimeout(() => {
-              setIsAnimating([0, 0, 0]);
-            }, 1500);
-          }}
-        >
-          <p className={styles.randomText}>?</p>
-        </div>
-        <div className={styles.resultContainer}>
-          <p
-            style={{
-              visibility: role === "SUP" ? "visible" : "hidden",
-              color: `${result.color}`,
+      )}
+      {dps.length !== 0 && (
+        <div>
+          <p className={styles.randomCubeName}>딜러</p>
+          <div
+            className={`${styles.randomCube} ${
+              isAnimating[1] === 1 ? styles.animating : ""
+            }`}
+            onClick={() => {
+              setIsAnimating([0, 1, 0]);
+              setRole("DPS");
+              getRandomCharacter("DPS", dps);
+              setTimeout(() => {
+                setIsAnimating([0, 0, 0]);
+              }, 2000);
             }}
-            className={`${styles.resultName} ${
-              isAnimating[2] === 1 && styles.slideDown
-            }`}
           >
-            {"<"}
-            {result.name}
-            {">"}
-          </p>
+            <p className={styles.randomText}>?</p>
+          </div>
+          <div className={styles.resultContainer}>
+            <p
+              style={{
+                visibility: role === "DPS" ? "visible" : "hidden",
+                color: `${result.color}`,
+              }}
+              className={`${styles.resultName} ${
+                isAnimating[1] === 1 && styles.slideDown
+              }`}
+            >
+              {"<"}
+              {result.name}
+              {">"}
+            </p>
+          </div>
         </div>
-      </div>
+      )}
+      {sup.length !== 0 && (
+        <div>
+          <p className={styles.randomCubeName}>힐러</p>
+          <div
+            className={`${styles.randomCube} ${
+              isAnimating[2] === 1 ? styles.animating : ""
+            }`}
+            onClick={() => {
+              setIsAnimating([0, 0, 1]);
+              setRole("SUP");
+              getRandomCharacter("SUP", sup);
+              setTimeout(() => {
+                setIsAnimating([0, 0, 0]);
+              }, 1500);
+            }}
+          >
+            <p className={styles.randomText}>?</p>
+          </div>
+          <div className={styles.resultContainer}>
+            <p
+              style={{
+                visibility: role === "SUP" ? "visible" : "hidden",
+                color: `${result.color}`,
+              }}
+              className={`${styles.resultName} ${
+                isAnimating[2] === 1 && styles.slideDown
+              }`}
+            >
+              {"<"}
+              {result.name}
+              {">"}
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
