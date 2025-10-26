@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/mini-project-overwatch/static/css/main.32933b3b.css",
+    "main.js": "/mini-project-overwatch/static/js/main.0d8ca9ef.js",
+    "static/js/453.9b2ae843.chunk.js": "/mini-project-overwatch/static/js/453.9b2ae843.chunk.js",
+    "static/media/jipgaebugprofile.png": "/mini-project-overwatch/static/media/jipgaebugprofile.63d44900f0fdfdb052a5.png",
+    "static/media/Super_Mario_World_Text_Box.ttf": "/mini-project-overwatch/static/media/Super_Mario_World_Text_Box.40e28e363d632dee31c5.ttf",
+    "static/media/Super_Mario_World_Text_Box.woff": "/mini-project-overwatch/static/media/Super_Mario_World_Text_Box.3f33d6874fc4394684f1.woff",
+    "index.html": "/mini-project-overwatch/index.html",
+    "main.32933b3b.css.map": "/mini-project-overwatch/static/css/main.32933b3b.css.map",
+    "main.0d8ca9ef.js.map": "/mini-project-overwatch/static/js/main.0d8ca9ef.js.map",
+    "453.9b2ae843.chunk.js.map": "/mini-project-overwatch/static/js/453.9b2ae843.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32933b3b.css",
+    "static/js/main.0d8ca9ef.js"
+  ]
+}
