@@ -1,0 +1,101 @@
+@font-face {
+  font-family: "Super Mario World Text Box";
+  src: url("../asset/fonts/Super_Mario_World_Text_Box.woff") format("woff"),
+    url("../asset/fonts/Super_Mario_World_Text_Box.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@keyframes rainbow-cycle {
+  0% {
+    background-color: rgb(241, 202, 0);
+  } /* Yellow (Start) */
+  16% {
+    background-color: #ff0000;
+  } /* Red */
+  33% {
+    background-color: #ffa500;
+  } /* Orange */
+  50% {
+    background-color: #ffff00;
+  } /* Yellow */
+  66% {
+    background-color: #008000;
+  } /* Green */
+  83% {
+    background-color: #0000ff;
+  } /* Blue */
+  100% {
+    background-color: rgb(241, 202, 0);
+  } /* Yellow (End of cycle for seamless loop) */
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    color: transparent;
+  }
+  45% {
+    color: transparent;
+  }
+  to {
+    transform: translateY(0);
+    color: black;
+  }
+}
+
+.randomScreen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.randomCubeName {
+  font-weight: 700;
+  text-align: center;
+}
+.randomCube {
+  width: 8rem;
+  height: 8rem;
+  background-color: rgb(241, 202, 0);
+  border: 3px solid black;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.randomCube:hover {
+  cursor: pointer;
+}
+.randomText {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Super Mario World Text Box";
+}
+.resultContainer {
+  height: 5vh;
+}
+.resultName {
+  text-align: center;
+  z-index: 1;
+}
+.resultScreen {
+  width: 100vw;
+  height: 50vh;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+}
+.character {
+  width: 7rem;
+  height: 7rem;
+  margin-top: 6rem;
+}
+.animating {
+  animation: rainbow-cycle 0.5s linear infinite;
+}
+.slideDown {
+  animation: slideDown 2s forwards;
+}
