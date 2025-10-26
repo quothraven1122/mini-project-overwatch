@@ -9,9 +9,9 @@ export default function SelectScreen() {
   const { tank, setTank, dps, setDps, sup, setSup } = useGlobal();
   const navigate = useNavigate();
   useEffect(() => {
-    const storedTank = JSON.parse(localStorage.getItem("tank"));
-    const storedDps = JSON.parse(localStorage.getItem("dps"));
-    const storedSup = JSON.parse(localStorage.getItem("sup"));
+    const storedTank = JSON.parse(localStorage.getItem("tank")) || [];
+    const storedDps = JSON.parse(localStorage.getItem("dps")) || [];
+    const storedSup = JSON.parse(localStorage.getItem("sup")) || [];
     setTank(storedTank);
     setDps(storedDps);
     setSup(storedSup);
