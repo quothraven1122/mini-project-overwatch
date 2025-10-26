@@ -1,6 +1,7 @@
 .container {
-  width: 5rem;
+  width: 6rem;
   padding: 0.5rem;
+  box-sizing: border-box;
 }
 .img {
   width: 5rem;

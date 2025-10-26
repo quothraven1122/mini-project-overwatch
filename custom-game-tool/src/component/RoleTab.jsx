@@ -10,7 +10,7 @@ export default function RoleTab({ role }) {
       <p>{RoleInfo[role].koname}</p>
       <div style={{ display: "flex", flexWrap: "wrap" }}>
         {CharacterInfo[role].map(({ name, img }, index) => (
-          <CharacterTab key={index} img={img} name={name} />
+          <CharacterTab key={index} img={img} name={name} role={role} />
         ))}
       </div>
     </div>
